@@ -1,5 +1,5 @@
 # Daniele Romeo
-# Dato un numero restituisce i numero duffiniani nell'intervalo [1-n] 
+# Dato un numero restituisce i numero duffiniani nell'intervalo [n1-n2] 
 
 
 .text               
@@ -7,8 +7,8 @@ main:   la      $s0, dati
         la      $s1, ris_intermedi	
         la      $s2, risultati	              
         move    $t3, $s2 
-        lbu     $s3, 0($s0)             # intervallo 
-        lbu     $t5, 1($s0)
+        lbu     $s3, 0($s0)             # n2
+        lbu     $t5, 1($s0)             # n1
         addi    $t5, $t5, -1
         beq	    $s3, $zero, fine 
         move    $s0, $zero              
